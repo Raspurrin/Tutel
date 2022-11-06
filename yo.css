@@ -10,16 +10,80 @@ h1
 	/* font-weight:500px; */
 }
 
+/* .option
+{
+	grid-row: 1;
+	background-color: red;
+} */
+
+.menu
+{
+	display: grid;
+	height: 40px;
+	background-color: rgb(130, 130, 130);
+}
+
 body 
 {
 	text-align: left;
 	color:white;
-	background-color: rgb(75, 75, 75);
 	text-align: center;
-	z-index: -2;
+	/* overflow: hidden; */
 }
 
-ol, li, .something
+.square
 {
-	background-color: rgb(232, 32, 148);
+	width:100%;
+	height:100%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	background-color: rgb(52, 221, 111);
+}
+
+.options ul
+{
+	/* float: left; */
+	border-style:solid;
+	border-radius: 20px;
+	width:110%;
+	border-color: rgb(69, 69, 69);
+	overflow: hidden;
+	display: flex;
+	/* justify-content: space-evenly; */
+	padding: 10px;
+	margin: 0;
+	background-color: rgb(23, 23, 23);
+	animation-name: line;
+	animation-duration: 2s;
+	list-style-type: none;
+}
+
+.options ul li
+{
+	font-size: 15px;
+	transform: rotateZ(-30deg);
+	border-radius: 50000px;
+	border-style: double;
+	/* border-radius: 10; */
+	padding: 5px 100px;
+	background-color: rgb(52, 221, 111);
+	animation-name: rainbow_options;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	display: inline;
+}
+
+@keyframes rainbow_options
+{
+	0% {background-color: rgb(52, 221, 111)}
+	25% {background-color: rgb(238, 42, 252);}
+	50% {background-color: rgb(221, 52, 75);}
+	75% {background-color: rgb(221, 125, 52);}
+	100% {background-color: rgb(52, 221, 111)}
+}
+
+@keyframes line
+{
+	from {width: 0;}
+	to {width: 100;}
 }
